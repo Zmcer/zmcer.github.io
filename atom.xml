@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Zmcerの个人小站</title>
+  
+  <subtitle>Zmcer</subtitle>
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2020-11-14T20:12:45.882Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Kevin Zhang</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello</title>
+    <link href="http://example.com/2019/10/27/Hello/"/>
+    <id>http://example.com/2019/10/27/Hello/</id>
+    <published>2019-10-27T11:10:33.000Z</published>
+    <updated>2020-11-14T20:12:45.882Z</updated>
+    
+    <content type="html"><![CDATA[<p>本站从<strong>MediaWiki</strong>升级到了<strong>Hexo</strong>系统并迁移到<strong>GitHub</strong>，<em>但不幸的是</em>，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本站从&lt;strong&gt;MediaWiki&lt;/strong&gt;升级到了&lt;strong&gt;Hexo&lt;/strong&gt;系统并迁移到&lt;strong&gt;GitHub&lt;/strong&gt;，&lt;em&gt;但不幸的是&lt;/em&gt;，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="-公告" scheme="http://example.com/tags/%E5%85%AC%E5%91%8A/"/>
+    
+  </entry>
+  
+</feed>

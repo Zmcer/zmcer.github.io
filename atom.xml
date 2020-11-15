@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2020-11-15T04:23:24.274Z</updated>
+  <updated>2020-11-15T04:28:21.541Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在hexo中插入网易云外链播放器</title>
+    <link href="http://example.com/2020/11/15/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E7%BD%91%E6%98%93%E4%BA%91%E5%A4%96%E9%93%BE%E6%92%AD%E6%94%BE%E5%99%A8/"/>
+    <id>http://example.com/2020/11/15/%E5%9C%A8hexo%E4%B8%AD%E6%8F%92%E5%85%A5%E7%BD%91%E6%98%93%E4%BA%91%E5%A4%96%E9%93%BE%E6%92%AD%E6%94%BE%E5%99%A8/</id>
+    <published>2020-11-15T04:28:21.000Z</published>
+    <updated>2020-11-15T04:28:21.541Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>我回来了</title>

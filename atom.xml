@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Zmcerの个人小站</title>
+  <title>Zmcerのblog</title>
   
   <subtitle>Fork me on Github</subtitle>
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="http://zmcer.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="http://zmcer.github.io/"/>
   <updated>2020-11-15T04:23:24.274Z</updated>
-  <id>http://example.com/</id>
+  <id>http://zmcer.github.io/</id>
   
   <author>
     <name>Kevin Zhang</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>我回来了</title>
-    <link href="http://example.com/2020/11/14/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/"/>
-    <id>http://example.com/2020/11/14/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/</id>
+    <link href="http://zmcer.github.io/2020/11/14/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/"/>
+    <id>http://zmcer.github.io/2020/11/14/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86/</id>
     <published>2020-11-14T04:12:58.000Z</published>
     <updated>2020-11-15T04:23:24.274Z</updated>
     
@@ -34,19 +34,19 @@
     
     
     
-    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    <category term="生活" scheme="http://zmcer.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-    <category term="小记录" scheme="http://example.com/tags/%E5%B0%8F%E8%AE%B0%E5%BD%95/"/>
+    <category term="小记录" scheme="http://zmcer.github.io/tags/%E5%B0%8F%E8%AE%B0%E5%BD%95/"/>
     
-    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="http://zmcer.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Hello</title>
-    <link href="http://example.com/2019/10/27/Hello/"/>
-    <id>http://example.com/2019/10/27/Hello/</id>
+    <link href="http://zmcer.github.io/2019/10/27/Hello/"/>
+    <id>http://zmcer.github.io/2019/10/27/Hello/</id>
     <published>2019-10-27T11:10:33.000Z</published>
     <updated>2020-11-14T20:31:21.052Z</updated>
     
@@ -61,10 +61,10 @@
     
     
     
-    <category term="公告" scheme="http://example.com/categories/%E5%85%AC%E5%91%8A/"/>
+    <category term="公告" scheme="http://zmcer.github.io/categories/%E5%85%AC%E5%91%8A/"/>
     
     
-    <category term="网站更新" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0/"/>
+    <category term="网站更新" scheme="http://zmcer.github.io/tags/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0/"/>
     
   </entry>
   

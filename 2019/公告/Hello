@@ -4,16 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>标签: 随笔 | Zmcerのblog</title>
+  <title>Hello | Zmcerのblog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Zmcer的小站个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zmcerのblog">
-<meta property="og:url" content="http://zmcer.github.io/tags/%E9%9A%8F%E7%AC%94/index.html">
+  <meta name="description" content="本站从MediaWiki升级到了Hexo系统并迁移到GitHub，但不幸的是，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hello">
+<meta property="og:url" content="http://zmcer.github.io/2019/%E5%85%AC%E5%91%8A/Hello">
 <meta property="og:site_name" content="Zmcerのblog">
-<meta property="og:description" content="Zmcer的小站个人博客">
+<meta property="og:description" content="本站从MediaWiki升级到了Hexo系统并迁移到GitHub，但不幸的是，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-10-27T11:10:33.000Z">
+<meta property="article:modified_time" content="2020-11-14T20:31:21.052Z">
 <meta property="article:author" content="Kevin Zhang">
+<meta property="article:tag" content="网站更新">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Zmcerのblog" type="application/atom+xml">
@@ -77,39 +80,63 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/%E7%94%9F%E6%B4%BB/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86" class="archive-article-date">
-  <time class="dt-published" datetime="2020-11-14T04:12:58.000Z" itemprop="datePublished">11月 14</time>
+        <section id="main"><article id="post-Hello" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/%E5%85%AC%E5%91%8A/Hello" class="article-date">
+  <time class="dt-published" datetime="2019-10-27T11:10:33.000Z" itemprop="datePublished">2019-10-27</time>
 </a>
-      
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%85%AC%E5%91%8A/">公告</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/%E7%94%9F%E6%B4%BB/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86">我回来了</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hello
     </h1>
   
 
-    </header>
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>本站从<strong>MediaWiki</strong>升级到了<strong>Hexo</strong>系统并迁移到<strong>GitHub</strong>，<em>但不幸的是</em>，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zmcer.github.io/2019/%E5%85%AC%E5%91%8A/Hello" data-id="cki1jxem800019ote31j2b9r2" data-title="Hello" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E7%AB%99%E6%9B%B4%E6%96%B0/" rel="tag">网站更新</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/%E7%94%9F%E6%B4%BB/%E6%88%91%E5%9B%9E%E6%9D%A5%E4%BA%86" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          我回来了
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 
 </section>

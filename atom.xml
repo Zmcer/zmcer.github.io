@@ -69,6 +69,32 @@
   </entry>
   
   <entry>
+    <title>调用钉钉机器人方法</title>
+    <link href="http://zmcer.github.io/2020/%E8%B0%83%E7%94%A8%E9%92%89%E9%92%89%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%96%B9%E6%B3%95/"/>
+    <id>http://zmcer.github.io/2020/%E8%B0%83%E7%94%A8%E9%92%89%E9%92%89%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%96%B9%E6%B3%95/</id>
+    <published>2020-03-06T14:23:28.000Z</published>
+    <updated>2020-12-16T09:28:06.453Z</updated>
+    
+    <content type="html"><![CDATA[<p>众所周知，最近因为’新冠’疫情爆发大家都不用去上学了，所以我们只能<del>开心</del>难过的呆在家里使用钉钉（Dingtalk）上网课。于是在我<del>瞎翻</del>探索功能的时候发现了自定义机器人这个功能。</p><hr><p>Tips：机器人支持Webhook协议的自定义接入。</p><ul><li>首先在PC端钉钉新建自定义机器人（这步有手就行，还用教？）</li><li>在管理机器人界面点击Hook地址栏右面的“复制”按钮，即可获得这个机器人对应的Webhook地址，格式如下<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;oapi.dingtalk.com&#x2F;robot&#x2F;send?access_token&#x3D;xxxxxxxx</span><br></pre></td></tr></table></figure><a id="more"></a></li><li>获取到Webhook地址后，用户可以使用任何方式向这个地址发起HTTP POST 请求，即可实现给该群组发送消息。<em>注意，发起POST请求时，必须将字符集编码设置成UTF-8。</em><h2 id="测试自定义机器人"><a href="#测试自定义机器人" class="headerlink" title="测试自定义机器人"></a>测试自定义机器人</h2>通过curl命令行工具（Windows10 1809后自带）可以快速验证自定义机器人是否可以正常工作<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl &#39;https:&#x2F;&#x2F;oapi.dingtalk.com&#x2F;robot&#x2F;send?access_token&#x3D;xxxxxxxx&#39; \ </span><br><span class="line">   -H &#39;Content-Type: application&#x2F;json&#39; \ </span><br><span class="line">   -d &#39;&#123;&quot;msgtype&quot;: &quot;text&quot;,&quot;text&quot;:&#123;&quot;content&quot;: &quot;我就是我, 是不一样的烟火&quot;&#125;&#125;&#39;</span><br></pre></td></tr></table></figure>然后就可以控制机器人（Python）搞事了（雾</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;众所周知，最近因为’新冠’疫情爆发大家都不用去上学了，所以我们只能&lt;del&gt;开心&lt;/del&gt;难过的呆在家里使用钉钉（Dingtalk）上网课。于是在我&lt;del&gt;瞎翻&lt;/del&gt;探索功能的时候发现了自定义机器人这个功能。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Tips：机器人支持Webhook协议的自定义接入。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;首先在PC端钉钉新建自定义机器人（这步有手就行，还用教？）&lt;/li&gt;
+&lt;li&gt;在管理机器人界面点击Hook地址栏右面的“复制”按钮，即可获得这个机器人对应的Webhook地址，格式如下&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https:&amp;#x2F;&amp;#x2F;oapi.dingtalk.com&amp;#x2F;robot&amp;#x2F;send?access_token&amp;#x3D;xxxxxxxx&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="http://zmcer.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="钉钉" scheme="http://zmcer.github.io/tags/%E9%92%89%E9%92%89/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello</title>
     <link href="http://zmcer.github.io/2019/Hello/"/>
     <id>http://zmcer.github.io/2019/Hello/</id>

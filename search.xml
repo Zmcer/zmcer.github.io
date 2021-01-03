@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>2021</title>
+    <url>/2021/2021/</url>
+    <content><![CDATA[<p>Welcome to 2021!</p>
+<iframe src="//music.163.com/outchain/player?type=2&id=1425886590&auto=0&height=66" width="[330]" height="[86]" frameborder="0" loading="lazy" allowfullscreen></iframe>
+
+]]></content>
+      <categories>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>小记录</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello</title>
     <url>/2019/Hello/</url>
     <content><![CDATA[<p>本站从<strong>MediaWiki</strong>升级到了<strong>Hexo</strong>系统并迁移到<strong>GitHub</strong>，<em>但不幸的是</em>，MediaWiki的页面全部丢失，只剩下部分页面(缺失图片)。</p>

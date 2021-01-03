@@ -6,7 +6,7 @@
   <link href="https://zmcer.top/atom.xml" rel="self"/>
   
   <link href="https://zmcer.top/"/>
-  <updated>2020-12-12T18:25:20.261Z</updated>
+  <updated>2021-01-03T15:06:16.915Z</updated>
   <id>https://zmcer.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021</title>
+    <link href="https://zmcer.top/2021/2021/"/>
+    <id>https://zmcer.top/2021/2021/</id>
+    <published>2020-12-31T16:56:14.000Z</published>
+    <updated>2021-01-03T15:06:16.915Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to 2021!</p><iframe src="//music.163.com/outchain/player?type=2&id=1425886590&auto=0&height=66" width="[330]" height="[86]" frameborder="0" loading="lazy" allowfullscreen></iframe>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to 2021!&lt;/p&gt;
+&lt;iframe src=&quot;//music.163.com/outchain/player?type=2&amp;id=1425886590&amp;auto=0&amp;height=66&quot; width=&quot;[330]&quot; height=&quot;[86]&quot; fram</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://zmcer.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="小记录" scheme="https://zmcer.top/tags/%E5%B0%8F%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="随笔" scheme="https://zmcer.top/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>摸鱼小技巧</title>

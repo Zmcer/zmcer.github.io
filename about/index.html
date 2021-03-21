@@ -111,8 +111,13 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://zmcer.top/about/index.html" data-id="ckmhsak6b0002lwte7j7i6ilk" data-title="关于" class="article-share-link">分享</a>
+      <a data-url="https://zmcer.top/about/index.html" data-id="ckmikict70000k8tegwz6erea" data-title="关于" class="article-share-link">分享</a>
       
+      
+        <a href="/about/index.html#comments" class="article-comment-link">
+          <span class="post-comments-count valine-comment-count" data-xid="/about/index.html" itemprop="commentCount"></span>
+          留言
+        </a>
       
       
     </footer>
@@ -123,6 +128,10 @@
 </article>
 
 
+
+  <section id="comments" class="vcomment">
+
+  </section>
 </section>
         
           <aside id="sidebar">
@@ -245,6 +254,29 @@
 
 
 
+
+  
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+<script>
+    var GUEST_INFO = ['nick','mail','link'];
+    var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+        return GUEST_INFO.indexOf(item) > -1
+    });
+    var notify = 'false' == true;
+    var verify = 'false' == true;
+    new Valine({
+        el: '.vcomment',
+        notify: notify,
+        verify: verify,
+        appId: "Q70yuGe0ijjaIxEVzMhXDLhh-gzGzoHsz",
+        appKey: "WFlyArI1DpqhRRiA07YOiCok",
+        placeholder: "欢迎互动~",
+        pageSize:'5',
+        avatar:'mp',
+        lang:'zh-cn'
+    });
+</script>
 
   </div>
 </body>

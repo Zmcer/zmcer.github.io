@@ -28,6 +28,34 @@
       </tags>
   </entry>
   <entry>
+    <title>养机场日记 v2board搭建</title>
+    <url>/2021/%E5%85%BB%E6%9C%BA%E5%9C%BA%E6%97%A5%E8%AE%B0%20v2board%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<p>V2Board（Way to board）是一种支持多种协议的面板，我选择了它是因为快速和低占用的特点<a href="https://github.com/v2board/v2board">Github地址</a><br>Let’s go!<br>本文环境:Centos7<br>#安装aaPanel<br>请在 <a href="https://forum.aapanel.com/d/9-aapanel-linux-panel-688-installation-tutorial">aaPanel</a>选择你的系统安装方式。这里以Centos为例</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Centos:</span><br><span class="line">yum install -y wget &amp;&amp; wget -O install.sh [http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh](http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh) &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>安装完成后我们登陆 aaPanel 进行环境的安装<br>选择使用LNMP的环境<br>Nginx 1.17<br>MySQL 5.6<br>PHP 7.3<br>选择 Fast 快速编译后进行安装。<br>#安装Redis<br>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Install extentions &gt; redis 进行安装。<br>#解除被禁止的函数<br>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Disabled functions 将 putenv proc_open pcntl_alarm pcntl_signal 从列表中删除。<br>#添加站点<br>aaPanel 面板 &gt; Website &gt; Add site</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在Domain填入域名</span><br><span class="line">在Database选择MySQL</span><br><span class="line">在PHP Version选择PHP-73</span><br></pre></td></tr></table></figure>
+<p>#安装V2Board<br>通过SSH登录到服务器后访问站点路径如：/www/wwwroot/你的站点域名</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如 cd &#x2F;www&#x2F;wwwroor&#x2F;你的站点名称</span><br></pre></td></tr></table></figure>
+<p>注：以下命令都需要在站点目录进行执行。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 删除目录下文件</span><br><span class="line">chattr -i .user.ini</span><br><span class="line">rm -rf .htaccess 404.html index.html .user.ini</span><br><span class="line">#执行命令从 Github 克隆到当前目录</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;v2board&#x2F;v2board.git .&#x2F;</span><br><span class="line">#执行命令下载 composer.phar 到当前目录</span><br><span class="line">wget https:&#x2F;&#x2F;getcomposer.org&#x2F;download&#x2F;1.9.0&#x2F;composer.phar</span><br><span class="line">#执行命令进行包安装</span><br><span class="line">php composer.phar install</span><br><span class="line">#安装过程中报错或者无法继续安装可能是因为内存不够导致的，&lt;&#x3D;1G内存的机器的请分配 swap</span><br><span class="line">#执行命令安装V2board</span><br><span class="line">php artisan v2board:install</span><br><span class="line">#根据提示完成安装</span><br></pre></td></tr></table></figure>
+<p>#配置站点目录及伪静态<br>添加完成后编辑添加的站点 &gt; Site directory &gt; Running directory 选择 /public 保存<br>添加完成后编辑添加的站点 &gt; URL rewrite 填入伪静态信息</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">location &#x2F;downloads &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location &#x2F; &#123;  </span><br><span class="line">    try_files $uri $uri&#x2F; &#x2F;index.php$is_args$query_string;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location ~ .*\.(js|css)?$</span><br><span class="line">&#123;</span><br><span class="line">    expires      1h;</span><br><span class="line">    error_log off;</span><br><span class="line">    access_log &#x2F;dev&#x2F;null; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>#配置定时任务<br>aaPanel 面板 &gt; Cron</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在 Type of Task 选择 Shell Script</span><br><span class="line">在 Name of Task 填写 v2board</span><br><span class="line">在 Period 选择 N Minutes 1 Minute</span><br><span class="line">在 Script content 填写 php &#x2F;www&#x2F;wwwroot&#x2F;路径&#x2F;artisan schedule:run</span><br><span class="line">根据上述信息添加每1分钟执行一次的定时任务</span><br></pre></td></tr></table></figure>
+<p>#常见问题<br>Q：500错误<br>A：检查站点根目录权限，递归755，保证目录有可写文件的权限，也有可能是Redis扩展没有安装或者Redis没有按照造成的。你可以通过查看storage/logs下的日志来排查错误或者开启debug模式。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">如果还不行 对站点目录执行 chown -R www:www *</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>V2ray</tag>
+        <tag>科学上网</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>寒假摸鱼纪念</title>
     <url>/2021/%E5%AF%92%E5%81%87%E6%91%B8%E9%B1%BC%E7%BA%AA%E5%BF%B5/</url>
     <content><![CDATA[<p><img src="https://i.loli.net/2021/03/01/GktZdrbwihCF8mc.png" alt="帅气の自拍"></p>
@@ -102,33 +130,6 @@
       </categories>
       <tags>
         <tag>钉钉</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>养机场日记 v2board搭建</title>
-    <url>/2021/%E5%85%BB%E6%9C%BA%E5%9C%BA%E6%97%A5%E8%AE%B0%20v2board%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<p>本文环境:Centos7<br>##安装aaPanel##<br>请在 <a href="https://forum.aapanel.com/d/9-aapanel-linux-panel-688-installation-tutorial">aaPanel</a>选择你的系统安装方式。这里以Centos为例</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Centos:</span><br><span class="line">yum install -y wget &amp;&amp; wget -O install.sh [http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh](http:&#x2F;&#x2F;www.aapanel.com&#x2F;script&#x2F;install_6.0_en.sh) &amp;&amp; bash install.sh</span><br></pre></td></tr></table></figure>
-<p>安装完成后我们登陆 aaPanel 进行环境的安装<br>选择使用LNMP的环境<br>Nginx 1.17<br>MySQL 5.6<br>PHP 7.3<br>选择 Fast 快速编译后进行安装。<br>##安装Redis##<br>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Install extentions &gt; redis 进行安装。<br>##解除被禁止的函数##<br>aaPanel 面板 &gt; App Store &gt; 找到PHP 7.3点击Setting &gt; Disabled functions 将 putenv proc_open pcntl_alarm pcntl_signal 从列表中删除。<br>##添加站点##<br>aaPanel 面板 &gt; Website &gt; Add site</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在Domain填入域名</span><br><span class="line">在Database选择MySQL</span><br><span class="line">在PHP Version选择PHP-73</span><br></pre></td></tr></table></figure>
-<p>##安装V2Board##<br>通过SSH登录到服务器后访问站点路径如：/www/wwwroot/你的站点域名</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">例如 cd &#x2F;www&#x2F;wwwroor&#x2F;你的站点名称</span><br></pre></td></tr></table></figure>
-<p>注：以下命令都需要在站点目录进行执行。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 删除目录下文件</span><br><span class="line">chattr -i .user.ini</span><br><span class="line">rm -rf .htaccess 404.html index.html .user.ini</span><br><span class="line">#执行命令从 Github 克隆到当前目录</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;v2board&#x2F;v2board.git .&#x2F;</span><br><span class="line">#执行命令下载 composer.phar 到当前目录</span><br><span class="line">wget https:&#x2F;&#x2F;getcomposer.org&#x2F;download&#x2F;1.9.0&#x2F;composer.phar</span><br><span class="line">#执行命令进行包安装</span><br><span class="line">php composer.phar install</span><br><span class="line">#安装过程中报错或者无法继续安装可能是因为内存不够导致的，&lt;&#x3D;1G内存的机器的请分配 swap</span><br><span class="line">#执行命令安装V2board</span><br><span class="line">php artisan v2board:install</span><br><span class="line">#根据提示完成安装</span><br></pre></td></tr></table></figure>
-<p>##配置站点目录及伪静态##<br>添加完成后编辑添加的站点 &gt; Site directory &gt; Running directory 选择 /public 保存<br>添加完成后编辑添加的站点 &gt; URL rewrite 填入伪静态信息</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">location &#x2F;downloads &#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location &#x2F; &#123;  </span><br><span class="line">    try_files $uri $uri&#x2F; &#x2F;index.php$is_args$query_string;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">location ~ .*\.(js|css)?$</span><br><span class="line">&#123;</span><br><span class="line">    expires      1h;</span><br><span class="line">    error_log off;</span><br><span class="line">    access_log &#x2F;dev&#x2F;null; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>##配置定时任务##<br>aaPanel 面板 &gt; Cron</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">在 Type of Task 选择 Shell Script</span><br><span class="line">在 Name of Task 填写 v2board</span><br><span class="line">在 Period 选择 N Minutes 1 Minute</span><br><span class="line">在 Script content 填写 php &#x2F;www&#x2F;wwwroot&#x2F;路径&#x2F;artisan schedule:run</span><br><span class="line">根据上述信息添加每1分钟执行一次的定时任务</span><br></pre></td></tr></table></figure>
-<p>##常见问题##<br>Q：500错误<br>A：检查站点根目录权限，递归755，保证目录有可写文件的权限，也有可能是Redis扩展没有安装或者Redis没有按照造成的。你可以通过查看storage/logs下的日志来排查错误或者开启debug模式。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">如果还不行 对站点目录执行 chown -R www:www *</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>技术</category>
-      </categories>
-      <tags>
-        <tag>V2ray</tag>
-        <tag>科学上网</tag>
       </tags>
   </entry>
 </search>
